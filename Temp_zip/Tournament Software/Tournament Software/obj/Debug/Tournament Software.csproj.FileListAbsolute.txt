@@ -1,0 +1,51 @@
+D:\Tostery\Tournament Software\Tournament Software\bin\Debug\Tournament Software.exe.config
+D:\Tostery\Tournament Software\Tournament Software\bin\Debug\Tournament Software.exe
+D:\Tostery\Tournament Software\Tournament Software\bin\Debug\Tournament Software.pdb
+D:\Tostery\Tournament Software\Tournament Software\obj\Debug\Tournament Software.csprojAssemblyReference.cache
+D:\Tostery\Tournament Software\Tournament Software\obj\Debug\MainWindow.g.cs
+D:\Tostery\Tournament Software\Tournament Software\obj\Debug\App.g.cs
+D:\Tostery\Tournament Software\Tournament Software\obj\Debug\Tournament Software_MarkupCompile.cache
+D:\Tostery\Tournament Software\Tournament Software\obj\Debug\Tournament Software_MarkupCompile.lref
+D:\Tostery\Tournament Software\Tournament Software\obj\Debug\MainWindow.baml
+D:\Tostery\Tournament Software\Tournament Software\obj\Debug\Tournament Software.g.resources
+D:\Tostery\Tournament Software\Tournament Software\obj\Debug\Tournament_Software.Properties.Resources.resources
+D:\Tostery\Tournament Software\Tournament Software\obj\Debug\Tournament Software.csproj.GenerateResource.cache
+D:\Tostery\Tournament Software\Tournament Software\obj\Debug\Tournament Software.exe
+D:\Tostery\Tournament Software\Tournament Software\obj\Debug\Tournament Software.pdb
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\bin\Debug\Tournament Software.exe.config
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\bin\Debug\Tournament Software.exe
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\bin\Debug\Tournament Software.pdb
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Tournament Software.csprojAssemblyReference.cache
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\MainWindow.g.cs
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\App.g.cs
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Tournament Software_MarkupCompile.cache
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Tournament Software_MarkupCompile.lref
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\MainWindow.baml
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Tournament Software.g.resources
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Tournament_Software.Properties.Resources.resources
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Tournament Software.csproj.GenerateResource.cache
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Tournament Software.csproj.CoreCompileInputs.cache
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Tournament Software.exe
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Tournament Software.pdb
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Round1.g.cs
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Window1.g.cs
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Round1.baml
+D:\Projekty\TournamentSoftware\Tournament Software\Tournament Software\obj\Debug\Window1.baml
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\bin\Debug\Tournament Software.exe.config
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\bin\Debug\Tournament Software.exe
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\bin\Debug\Tournament Software.pdb
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Tournament Software.csprojAssemblyReference.cache
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\MainWindow.g.cs
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Round1.g.cs
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Window1.g.cs
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\App.g.cs
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Tournament Software_MarkupCompile.cache
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Tournament Software_MarkupCompile.lref
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\MainWindow.baml
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Round1.baml
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Window1.baml
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Tournament Software.g.resources
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Tournament_Software.Properties.Resources.resources
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Tournament Software.csproj.GenerateResource.cache
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Tournament Software.exe
+D:\Tostery\TournamentSoftware-master\Tournament Software\Tournament Software\obj\Debug\Tournament Software.pdb
