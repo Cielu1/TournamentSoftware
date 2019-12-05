@@ -45,24 +45,119 @@ namespace Tournament_Software
             }
 
             GenerateListOfPlacings();
+            GenerateListOfLists();
         }
 
+        int GroupingNumber = 0;
+        public void SetGroupingNumber(int i)
+        {
+            GroupingNumber = i;
+        }
 
+        void GenerateListOfLists()
+        {
+            ListOfLobbies.Add(TempLobby1);
+            ListOfLobbies.Add(TempLobby2);
+            ListOfLobbies.Add(TempLobby3);
+            ListOfLobbies.Add(TempLobby4);
+
+            ListOfLobbies.Add(TempLobby5);
+            ListOfLobbies.Add(TempLobby6);
+            ListOfLobbies.Add(TempLobby7);
+            ListOfLobbies.Add(TempLobby8);
+
+            ListOfLobbies.Add(TempLobby9);
+            ListOfLobbies.Add(TempLobby10);
+            ListOfLobbies.Add(TempLobby11);
+            ListOfLobbies.Add(TempLobby12);
+
+            ListOfLobbies.Add(TempLobby13);
+            ListOfLobbies.Add(TempLobby14);
+            ListOfLobbies.Add(TempLobby15);
+            ListOfLobbies.Add(TempLobby16);
+
+            ListOfString.Add(CopyTextA);
+            ListOfString.Add(CopyTextB);
+            ListOfString.Add(CopyTextC);
+            ListOfString.Add(CopyTextD);
+
+            ListOfString.Add(CopyTextE);
+            ListOfString.Add(CopyTextF);
+            ListOfString.Add(CopyTextG);
+            ListOfString.Add(CopyTextH);
+
+            ListOfString.Add(CopyTextI);
+            ListOfString.Add(CopyTextJ);
+            ListOfString.Add(CopyTextK);
+            ListOfString.Add(CopyTextL);
+
+            ListOfString.Add(CopyTextM);
+            ListOfString.Add(CopyTextN);
+            ListOfString.Add(CopyTextO);
+            ListOfString.Add(CopyTextP);
+
+        }
+
+        List<__Player> TempLobby1 = new List<__Player>();
+        List<__Player> TempLobby2 = new List<__Player>();
+        List<__Player> TempLobby3 = new List<__Player>();
+        List<__Player> TempLobby4 = new List<__Player>();
+
+        List<__Player> TempLobby5 = new List<__Player>();
+        List<__Player> TempLobby6 = new List<__Player>();
+        List<__Player> TempLobby7 = new List<__Player>();
+        List<__Player> TempLobby8 = new List<__Player>();
+
+        List<__Player> TempLobby9 = new List<__Player>();
+        List<__Player> TempLobby10 = new List<__Player>();
+        List<__Player> TempLobby11 = new List<__Player>();
+        List<__Player> TempLobby12 = new List<__Player>();
+
+        List<__Player> TempLobby13 = new List<__Player>();
+        List<__Player> TempLobby14 = new List<__Player>();
+        List<__Player> TempLobby15 = new List<__Player>();
+        List<__Player> TempLobby16 = new List<__Player>();
+
+        List<List<__Player>> ListOfLobbies = new List<List<__Player>>();
+
+
+        string CopyTextA = "LOBBY 1 \r\n";
+        string CopyTextB = "LOBBY 2 \r\n";
+        string CopyTextC = "LOBBY 3 \r\n";
+        string CopyTextD = "LOBBY 4 \r\n";
+
+        string CopyTextE = "LOBBY 5 \r\n";
+        string CopyTextF = "LOBBY 6 \r\n";
+        string CopyTextG = "LOBBY 7 \r\n";
+        string CopyTextH = "LOBBY 8 \r\n";
+
+        string CopyTextI = "LOBBY 9 \r\n";
+        string CopyTextJ = "LOBBY 10 \r\n";
+        string CopyTextK = "LOBBY 11 \r\n";
+        string CopyTextL = "LOBBY 12 \r\n";
+
+        string CopyTextM = "LOBBY 13 \r\n";
+        string CopyTextN = "LOBBY 14 \r\n";
+        string CopyTextO = "LOBBY 15 \r\n";
+        string CopyTextP = "LOBBY 16 \r\n";
+
+        List<string> ListOfString = new List<string>();
 
         private void B_Generate_Click(object sender, RoutedEventArgs e)
         {
 
             RandomPlayers = PlayerObject.RandomizePlayers();
 
-            List<__Player> TempLobby1 = new List<__Player>();
-            List<__Player> TempLobby2 = new List<__Player>();
-            List<__Player> TempLobby3 = new List<__Player>();
-            List<__Player> TempLobby4 = new List<__Player>();
+            foreach (List<__Player> l in ListOfLobbies)
+            {
+                l.Clear();
+            }
 
-            string CopyTextA = "LOBBY 1 \r\n";
-            string CopyTextB = "LOBBY 2 \r\n";
-            string CopyTextC = "LOBBY 3 \r\n";
-            string CopyTextD = "LOBBY 4 \r\n";
+            foreach (string s in ListOfString)
+            {
+                s.Remove(0);
+            }
+
 
             switch (PlayersNumber)
             {
@@ -136,12 +231,77 @@ namespace Tournament_Software
                     OutputNames_Lobby4.ItemsSource = TempLobby4;
                     break;
 
+                case 128:
+                    for (int i = 0; i < 8; i++)
+                    {
+                        CopyTextA += "@" + RandomPlayers[i].DCN + "-" + RandomPlayers[i].IGN + "\r\n";
+                        TempLobby1.Add(new __Player() { IGN = RandomPlayers[i].IGN });
+
+                        CopyTextB += "@" + RandomPlayers[i + 8].DCN + "-" + RandomPlayers[i + 8].IGN + "\r\n";
+                        TempLobby2.Add(new __Player() { IGN = RandomPlayers[i + 8].IGN });
+
+                        CopyTextC += "@" + RandomPlayers[i + 16].DCN + "-" + RandomPlayers[i + 16].IGN + "\r\n";
+                        TempLobby3.Add(new __Player() { IGN = RandomPlayers[i + 16].IGN });
+
+                        CopyTextD += "@" + RandomPlayers[i + 24].DCN + "-" + RandomPlayers[i + 24].IGN + "\r\n";
+                        TempLobby4.Add(new __Player() { IGN = RandomPlayers[i + 24].IGN });
+
+                        //
+
+                        CopyTextE += "@" + RandomPlayers[i + 32].DCN + "-" + RandomPlayers[i + 32].IGN + "\r\n";
+                        TempLobby5.Add(new __Player() { IGN = RandomPlayers[i + 32].IGN });
+
+                        CopyTextF += "@" + RandomPlayers[i + 40].DCN + "-" + RandomPlayers[i + 40].IGN + "\r\n";
+                        TempLobby6.Add(new __Player() { IGN = RandomPlayers[i + 40].IGN });
+
+                        CopyTextG += "@" + RandomPlayers[i + 48].DCN + "-" + RandomPlayers[i + 48].IGN + "\r\n";
+                        TempLobby7.Add(new __Player() { IGN = RandomPlayers[i + 48].IGN });
+
+                        CopyTextH += "@" + RandomPlayers[i + 56].DCN + "-" + RandomPlayers[i + 56].IGN + "\r\n";
+                        TempLobby8.Add(new __Player() { IGN = RandomPlayers[i + 56].IGN });
+                        
+                        //
+
+                        CopyTextI += "@" + RandomPlayers[i + 64].DCN + "-" + RandomPlayers[i +64].IGN + "\r\n";
+                        TempLobby9.Add(new __Player() { IGN = RandomPlayers[i + 64].IGN });
+
+                        CopyTextJ += "@" + RandomPlayers[i + 72].DCN + "-" + RandomPlayers[i + 72].IGN + "\r\n";
+                        TempLobby10.Add(new __Player() { IGN = RandomPlayers[i + 72].IGN });
+
+                        CopyTextK += "@" + RandomPlayers[i + 80].DCN + "-" + RandomPlayers[i + 80].IGN + "\r\n";
+                        TempLobby11.Add(new __Player() { IGN = RandomPlayers[i + 80].IGN });
+
+                        CopyTextL += "@" + RandomPlayers[i + 88].DCN + "-" + RandomPlayers[i + 88].IGN + "\r\n";
+                        TempLobby12.Add(new __Player() { IGN = RandomPlayers[i + 88].IGN });
+
+                        //
+
+                        CopyTextM += "@" + RandomPlayers[i + 96].DCN + "-" + RandomPlayers[i +96].IGN + "\r\n";
+                        TempLobby13.Add(new __Player() { IGN = RandomPlayers[i + 96].IGN });
+
+                        CopyTextN += "@" + RandomPlayers[i + 104].DCN + "-" + RandomPlayers[i + 104].IGN + "\r\n";
+                        TempLobby14.Add(new __Player() { IGN = RandomPlayers[i + 104].IGN });
+
+                        CopyTextO += "@" + RandomPlayers[i + 112].DCN + "-" + RandomPlayers[i + 112].IGN + "\r\n";
+                        TempLobby15.Add(new __Player() { IGN = RandomPlayers[i + 112].IGN });
+
+                        CopyTextP += "@" + RandomPlayers[i + 120].DCN + "-" + RandomPlayers[i + 120].IGN + "\r\n";
+                        TempLobby16.Add(new __Player() { IGN = RandomPlayers[i + 120].IGN });
+
+                    }
+                //    OutputNames_Lobby1.ItemsSource = TempLobby1;
+               //     OutputNames_Lobby2.ItemsSource = TempLobby2;
+               //     OutputNames_Lobby3.ItemsSource = TempLobby3;
+                 //   OutputNames_Lobby4.ItemsSource = TempLobby4;
+                    break;
+
+
             }
 
-            TextBox_Team1.Text = CopyTextA;
-            TextBox_Team2.Text = CopyTextB;
-            TextBox_Team3.Text = CopyTextC;
-            TextBox_Team4.Text = CopyTextD;
+//            TextBox_Team1.Text = CopyTextA;
+  //          TextBox_Team2.Text = CopyTextB;
+    //        TextBox_Team3.Text = CopyTextC;
+      //      TextBox_Team4.Text = CopyTextD;
 
             #region STARA WERSJA 
             /* STARA WERSJA 
@@ -162,7 +322,73 @@ for (int i = 0; i < PlayersNumber; i++)
         }
 
 
-        List<TextBlock> PlacingsInRound = new List<TextBlock>();
+
+
+
+        void WriteTextes(int i)
+        {
+
+            OutputNames_Lobby1.ItemsSource = null;
+            OutputNames_Lobby2.ItemsSource = null;
+            OutputNames_Lobby3.ItemsSource = null;
+            OutputNames_Lobby4.ItemsSource = null;
+
+
+           switch (i)
+            {
+                case 0:
+                    OutputNames_Lobby1.ItemsSource = TempLobby1;
+                    OutputNames_Lobby2.ItemsSource = TempLobby2;
+                    OutputNames_Lobby3.ItemsSource = TempLobby3;
+                    OutputNames_Lobby4.ItemsSource = TempLobby4;
+
+                    TextBox_Team1.Text = CopyTextA;
+                    TextBox_Team2.Text = CopyTextB;
+                    TextBox_Team3.Text = CopyTextC;
+                    TextBox_Team4.Text = CopyTextD;
+                    break;
+
+                case 1:
+                    OutputNames_Lobby1.ItemsSource = "CIPA";
+                    OutputNames_Lobby2.ItemsSource = "DUPA";
+                    OutputNames_Lobby3.ItemsSource = "PIZDA";
+                    OutputNames_Lobby4.ItemsSource = "CHUJ";
+
+                    TextBox_Team1.Text = CopyTextE;
+                    TextBox_Team2.Text = CopyTextF;
+                    TextBox_Team3.Text = CopyTextG;
+                    TextBox_Team4.Text = CopyTextH;
+                    break;
+
+                case 2:
+                    OutputNames_Lobby1.ItemsSource = TempLobby9;
+                    OutputNames_Lobby2.ItemsSource = TempLobby10;
+                    OutputNames_Lobby3.ItemsSource = TempLobby11;
+                    OutputNames_Lobby4.ItemsSource = TempLobby12;
+
+                    TextBox_Team1.Text = CopyTextI;
+                    TextBox_Team2.Text = CopyTextJ;
+                    TextBox_Team3.Text = CopyTextK;
+                    TextBox_Team4.Text = CopyTextL;
+                    break;
+
+                case 3:
+                    OutputNames_Lobby1.ItemsSource = TempLobby13;
+                    OutputNames_Lobby2.ItemsSource = TempLobby14;
+                    OutputNames_Lobby3.ItemsSource = TempLobby15;
+                    OutputNames_Lobby4.ItemsSource = TempLobby16;
+
+                    TextBox_Team1.Text = CopyTextM;
+                    TextBox_Team2.Text = CopyTextN;
+                    TextBox_Team3.Text = CopyTextO;
+                    TextBox_Team4.Text = CopyTextP;
+                    break;
+
+            } 
+        }
+
+
+    List<TextBlock> PlacingsInRound = new List<TextBlock>();
 
         void GenerateListOfPlacings()
         {
@@ -181,22 +407,33 @@ for (int i = 0; i < PlayersNumber; i++)
                 p.Score += points;
                 i++;
             }
+            WriteLeaderBoard(0, PlayersNumber);
 
-            int j = 0 ;
-            List<__Player> LeaderBoardList = PlayerObject.LeaderBoardList(RandomPlayers);
-            List<__Player> TempLeaderBoard = new List<__Player>();
-
+            /*
             foreach (__Player p in LeaderBoardList)
             {
                 TempLeaderBoard.Add(new __Player() {DCN = LeaderBoardList[j].DCN, IGN = LeaderBoardList[j].IGN,Score = LeaderBoardList[j].Score });
                 j++;
                
-            }
-            LeaderboardBox.ItemsSource = TempLeaderBoard;
+            }*/
+           
 
         }
 
+        void WriteLeaderBoard(int i, int j)
+        {
+            List<__Player> LeaderBoardList = PlayerObject.LeaderBoardList(RandomPlayers);
+            List<__Player> EmptyList = new List<__Player>();
+            List<__Player> TempLeaderBoard = new List<__Player>();
 
+            LeaderboardBox.ItemsSource = null;
+            for (int k = i; k < j; k++)
+            {
+                TempLeaderBoard.Add(new __Player() { DCN = LeaderBoardList[k].DCN, IGN = LeaderBoardList[k].IGN, Score = LeaderBoardList[k].Score });
+                k++;
+            }
+            LeaderboardBox.ItemsSource = TempLeaderBoard;
+        }
          
         /*
                 PlayerList.Clear();
@@ -281,18 +518,6 @@ for (int i = 0; i < PlayersNumber; i++)
 
 
 
-       
-
-
-
-
-
-
-
-
-
-
-
 
 
         private void TextBox_Team2_TextChanged(object sender, TextChangedEventArgs e)
@@ -329,17 +554,14 @@ for (int i = 0; i < PlayersNumber; i++)
         }
 
         private void B_R1_Click(object sender, RoutedEventArgs e)
-        {  
-            Window WindowR1 = new Round1();
-            WindowR1.Show();
-            
+        {
+            WriteLeaderBoard(0, 64);
         }
 
         private void B_R2_Click(object sender, RoutedEventArgs e)
         {
-            Window WindowR2 = new Round1();
-            WindowR2.Show();
-      
+
+            WriteLeaderBoard(17, 32);
         }
 
         private void RadioButton_PlayersNumber_8_Checked(object sender, RoutedEventArgs e)
@@ -354,12 +576,12 @@ for (int i = 0; i < PlayersNumber; i++)
 
         private void RadioButton_PlayersNumber_24_Checked(object sender, RoutedEventArgs e)
         {
-            SetPlayersNumber(24);
+            SetPlayersNumber(32);
         }
 
-        private void RadioButton_PlayersNumber_32_Checked(object sender, RoutedEventArgs e)
+        private void RadioButton_PlayersNumber_128_Checked(object sender, RoutedEventArgs e)
         {
-            SetPlayersNumber(32);
+            SetPlayersNumber(128);
         }
 
         private void LvUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -375,6 +597,31 @@ for (int i = 0; i < PlayersNumber; i++)
         private void TextBox_Team3_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void B_R5_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            WriteTextes(1);
+        }
+
+        private void B_R5_Copy2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void B_R5_Copy3_Click(object sender, RoutedEventArgs e)
+        {
+            WriteTextes(0);
+        }
+
+        private void B_R5_Copy5_Click(object sender, RoutedEventArgs e)
+        {
+            WriteTextes(3);
+        }
+
+        private void B_R3_Click(object sender, RoutedEventArgs e)
+        {
+            WriteLeaderBoard(33, 48);
         }
     }
 
