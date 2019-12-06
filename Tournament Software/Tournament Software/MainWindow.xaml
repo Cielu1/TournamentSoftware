@@ -14,19 +14,66 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="84*"/>
-            <RowDefinition Height="554*"/>
+            <RowDefinition Height="176*"/>
+            <RowDefinition Height="378*"/>
             <RowDefinition Height="51*"/>
         </Grid.RowDefinitions>
 
 
+        <ListView Margin="19,17,2,0" x:Name="LeaderboardBox" Background="Black" Grid.Row="1" Grid.Column="2" BorderBrush="Black" Foreground="Transparent" Grid.RowSpan="3" SelectionChanged="LeaderboardBox_SelectionChanged">
+            <ListView.View>
+                <GridView>
+
+                    <GridViewColumn Header="#" Width="30">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Left" Margin="6,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Place}" VerticalAlignment="Top" Width="241" Foreground="#FF34A198" FontSize="20" Height="40" Padding="0,15,0,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Discord Name" Width="140">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Left" Margin="6,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding DCN}" VerticalAlignment="Top" Width="241" Foreground="#FF34A198" FontSize="20" Height="40" Padding="0,15,0,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="InGame Nick" Width="140">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Left" Margin="6,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding IGN}" VerticalAlignment="Top" Width="241" Foreground="#FF34A198" FontSize="20" Height="40" Padding="0,15,0,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Points" Width="50">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Left" Margin="6,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Score}" VerticalAlignment="Top" Width="241" Foreground="#FF34A198" FontSize="20" Height="40" Padding="0,15,0,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+
+
+        <Image Grid.RowSpan="4" Source="EphosTournamentSoftwareTemplateV1Transparency.png" Stretch="Fill" IsEnabled="False" Margin="831,-40,-1710,40" Grid.Column="2"/>
+
+
         <Button x:Name="B_SignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="96,124,0,0" VerticalAlignment="Top" Width="174" Height="40" Click="B_SignUp_Click" Grid.Row="1"/>
-        <Button x:Name="B_Generate" Content="Generate Teams" HorizontalAlignment="Left" Margin="109,1,0,0" VerticalAlignment="Top" Width="176" Height="40" Background="#FF828DAF" BorderBrush="#FF383D4C" Click="B_Generate_Click" Grid.Row="2" RenderTransformOrigin="0.653,1.3"/>
+        <Button x:Name="B_Generate" Content="Generate Teams" HorizontalAlignment="Left" Margin="109,1,0,0" VerticalAlignment="Top" Width="176" Height="40" Background="#FF828DAF" BorderBrush="#FF383D4C" Click="B_Generate_Click" Grid.Row="3" RenderTransformOrigin="0.653,1.3"/>
 
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="605" Stroke="Black" VerticalAlignment="Top" Width="6" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="605" Stroke="Black" VerticalAlignment="Top" Width="5" Grid.Column="2" Grid.Row="1" Margin="1,0,0,0" Grid.RowSpan="2"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="605" Stroke="Black" VerticalAlignment="Top" Width="6" Grid.Column="1" Grid.Row="1" Grid.RowSpan="3"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="605" Stroke="Black" VerticalAlignment="Top" Width="5" Grid.Column="2" Grid.Row="1" Margin="1,0,0,0" Grid.RowSpan="3"/>
 
-        <TextBox x:Name="TextBox_Team2" HorizontalAlignment="Left" Height="185" Margin="198,169,0,0" TextWrapping="Wrap" Text="GROUP B &#xA;&#xA;L1 &#xD;&#xA;L2 &#xD;&#xA;L3&#xD;&#xA;L4&#xD;&#xA;L5&#xD;&#xA;L6&#xD;&#xA;L7&#xD;&#xA;L8&#xD;&#xA;L9&#xD;&#xA;" VerticalAlignment="Top" Width="179" IsReadOnly = "True" Grid.Row="1" TextAlignment="Center" TextChanged="TextBox_Team2_TextChanged" Background="LightGray"/>
-        <TextBox x:Name="TextBox_Team1" HorizontalAlignment="Left" Height="185" Margin="20,169,0,0" TextWrapping="Wrap" Text="L1 &#xA;L2 &#xA;L3&#xA;L4&#xA;L5&#xA;L6&#xA;L7&#xA;L8&#xA;L9&#xA;" VerticalAlignment="Top" Width="173" IsReadOnly = "True" Grid.Row="1" TextAlignment="Center" TextChanged="TextBox_Team1_TextChanged" Background="LightGray"/>
+        <TextBox x:Name="TextBox_Team2" HorizontalAlignment="Left" Height="185" Margin="198,169,0,0" TextWrapping="Wrap" Text="GROUP B &#xA;&#xA;L1 &#xA;L2 &#xA;L3&#xA;L4&#xA;L5&#xA;L6&#xA;L7&#xA;L8&#xA;L9&#xA;" VerticalAlignment="Top" Width="179" IsReadOnly = "True" Grid.Row="1" TextAlignment="Center" TextChanged="TextBox_Team2_TextChanged" Background="LightGray" Grid.RowSpan="2"/>
+        <TextBox x:Name="TextBox_Team1" HorizontalAlignment="Left" Height="185" Margin="20,169,0,0" TextWrapping="Wrap" Text="L1 &#xA;L2 &#xA;L3&#xA;L4&#xA;L5&#xA;L6&#xA;L7&#xA;L8&#xA;L9&#xA;" VerticalAlignment="Top" Width="173" IsReadOnly = "True" Grid.Row="1" TextAlignment="Center" TextChanged="TextBox_Team1_TextChanged" Background="LightGray" Grid.RowSpan="2"/>
         <TextBox x:Name="PlacingInRound1" HorizontalAlignment="Left" Height="20" Margin="205,30,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
@@ -37,8 +84,8 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="B_Submitt" Content="Submit" HorizontalAlignment="Left" Margin="181,550,0,0" Grid.Row="1" VerticalAlignment="Top" Width="126" Height="42" Click="B_Submitt_Click" Grid.Column="1" Grid.RowSpan="2"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="202,265,0,0" TextWrapping="Wrap" Text="Place" VerticalAlignment="Top" Foreground="#FFA9C1F5" FontSize="16" Grid.Row="1" Height="21" Width="37"/>
+        <Button x:Name="B_Submitt" Content="Submit" HorizontalAlignment="Left" Margin="181,373.667,0,0" Grid.Row="2" VerticalAlignment="Top" Width="126" Height="42" Click="B_Submitt_Click" Grid.Column="1" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="202,88.667,0,0" TextWrapping="Wrap" Text="Place" VerticalAlignment="Top" Foreground="#FFA9C1F5" FontSize="16" Grid.Row="2" Height="21" Width="37"/>
         <TextBlock HorizontalAlignment="Left" Margin="20,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFA9C1F5" FontSize="16" RenderTransformOrigin="1.003,0.611" Width="173" Grid.Row="1" Height="21"><Run Text="Discord name#"/><Run Text="XXXX"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="198,6,0,0" TextWrapping="Wrap" Text="In game nick" VerticalAlignment="Top" Foreground="#FFA9C1F5" FontSize="16" RenderTransformOrigin="1.003,0.611" Grid.Row="1" Width="179" Height="21"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="373" Foreground="LightGray" FontSize="20" TextAlignment="Center"><Run Text="Sign up players"/></TextBlock>
@@ -49,16 +96,16 @@
         <TextBox x:Name="PlacingInRound4" HorizontalAlignment="Left" Height="20" Margin="205,104,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
         <TextBox x:Name="PlacingInRound5" HorizontalAlignment="Left" Height="20" Margin="205,129,0,0" TextWrapping="Wrap" Text="5&#x9;&#x9;" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
         <TextBox x:Name="PlacingInRound6" HorizontalAlignment="Left" Height="20" Margin="204,154,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound7" HorizontalAlignment="Left" Height="21" Margin="204,179,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound8" HorizontalAlignment="Left" Height="20" Margin="204,205,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound7" HorizontalAlignment="Left" Height="21" Margin="204,2.667,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound8" HorizontalAlignment="Left" Height="20" Margin="204,28.667,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
         <TextBox x:Name="PlacingInRound9" HorizontalAlignment="Left" Height="20" Margin="438,31,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="1"/>
         <TextBox x:Name="PlacingInRound10" HorizontalAlignment="Left" Height="20" Margin="438,54,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="1"/>
         <TextBox x:Name="PlacingInRound11" HorizontalAlignment="Left" Height="21" Margin="438,78,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="1"/>
         <TextBox x:Name="PlacingInRound12" HorizontalAlignment="Left" Height="21" Margin="438,103,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="1"/>
         <TextBox x:Name="PlacingInRound13" HorizontalAlignment="Left" Height="20" Margin="438,129,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="1"/>
         <TextBox x:Name="PlacingInRound14" HorizontalAlignment="Left" Height="20" Margin="438,154,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="1"/>
-        <TextBox x:Name="PlacingInRound15" HorizontalAlignment="Left" Height="21" Margin="438,179,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="1"/>
-        <TextBox x:Name="PlacingInRound16" HorizontalAlignment="Left" Height="21" Margin="438,204,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="1"/>
+        <TextBox x:Name="PlacingInRound15" HorizontalAlignment="Left" Height="21" Margin="438,2.667,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="2"/>
+        <TextBox x:Name="PlacingInRound16" HorizontalAlignment="Left" Height="21" Margin="438,27.667,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="2"/>
         <Button x:Name="B_R1" Content="1-16" Grid.Column="2" HorizontalAlignment="Left" Margin="11,48,0,0" VerticalAlignment="Top" Width="35" Height="35" Click="B_R1_Click"/>
         <Button x:Name="B_R5" Content="65-80" Grid.Column="2" HorizontalAlignment="Left" Margin="171,48,0,0" VerticalAlignment="Top" Width="35" Height="35" RenderTransformOrigin="1.181,0.362"/>
         <Button x:Name="B_R4" Content="49-64" Grid.Column="2" HorizontalAlignment="Left" Margin="131,49,0,0" VerticalAlignment="Top" Width="35" Height="35"/>
@@ -71,10 +118,10 @@
         <RadioButton x:Name="RadioButton_PlayersNumber_24" Content="24" HorizontalAlignment="Left" Margin="195,59,0,0" VerticalAlignment="Top" Foreground="White" Checked="RadioButton_PlayersNumber_24_Checked" Height="15" Width="32"/>
         <RadioButton x:Name="RadioButton_PlayersNumber_128" Content="128" HorizontalAlignment="Left" Margin="238,59,0,0" VerticalAlignment="Top" Foreground="White" Checked="RadioButton_PlayersNumber_128_Checked" Height="15" Width="47"/>
         <TextBox x:Name="DiscordName1" HorizontalAlignment="Left" Height="85" Margin="20,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Background="#FF828DAF" Text="KOKOS#2234&#xA;TEST#d&#xA;SadarkContent#1111&#xA;SZKOŁA#1234&#xA;JANUSZ#2415&#xA;TRACZ#1234&#xA;MAŁY#6988&#xA;KOKS#2455&#xA;Maluch#2855&#xA;Duzy#2133&#xA;Klocuch#1551&#xA;Siara#6666&#xA;Witkacy#1255&#xA;Pomidor#9999&#xA;Komputer#8888&#xA;Mikrofon#7787&#xA;KOKOS#2234&#xA;TEST#2222&#xA;SafeForWorkContent#1111&#xA;SZKOŁA#1234&#xA;JANUSZ#2415&#xA;TRACZ#1234&#xA;MAŁY#6988&#xA;KOKS#2455&#xA;Maluch#2855&#xA;Duzy#2133&#xA;Klocuch#1551&#xA;Siara#6666&#xA;Witkacy#1255&#xA;Pomidor#9999&#xA;Komputer#8888&#xA;Mikrofon#7787" AcceptsReturn="True" Grid.Row="1"/>
-        <TextBox x:Name="Nickname1" HorizontalAlignment="Left" Height="84" Margin="198,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Background="#FF828DAF"  Text="KOKOS&#xD;&#xA;TEST&#xD;&#xA;DifferentIGNThanDiscord&#xD;&#xA;SZKOŁA&#xD;&#xA;JANUSZ&#xD;&#xA;TRACZ&#xD;&#xA;MAŁY&#xD;&#xA;KOKS&#xD;&#xA;Maluch&#xD;&#xA;Duzy&#xD;&#xA;Klocuch&#xD;&#xA;Siara&#xD;&#xA;Witkacy&#xD;&#xA;Pomidor&#xD;&#xA;Komputer&#xD;&#xA;Mikrofon&#xD;&#xA;KOKOS&#xD;&#xA;TEST&#xD;&#xA;DifferentIGNThanDiscord&#xD;&#xA;SZKOŁA&#xD;&#xA;JANUSZ&#xD;&#xA;TRACZ&#xD;&#xA;MAŁY&#xD;&#xA;KOKS&#xD;&#xA;Maluch&#xD;&#xA;Duzy&#xD;&#xA;Klocuch&#xD;&#xA;Siara&#xD;&#xA;Witkacy&#xD;&#xA;Pomidor&#xD;&#xA;Komputer&#xD;&#xA;Mikrofon"  AcceptsReturn="True" Grid.Row="1" />
-        <TextBox x:Name="TextBox_Team4" HorizontalAlignment="Left" Height="184" Margin="198,362,0,0" TextWrapping="Wrap" Text="GROUP B &#xA;&#xA;L1 &#xD;&#xA;L2 &#xD;&#xA;L3&#xD;&#xA;L4&#xD;&#xA;L5&#xD;&#xA;L6&#xD;&#xA;L7&#xD;&#xA;L8&#xD;&#xA;L9&#xD;&#xA;L10 &#xD;&#xA;" VerticalAlignment="Top" Width="179" IsReadOnly = "True" Grid.Row="1" TextAlignment="Center" TextChanged="TextBox_Team2_TextChanged" Background="LightGray"/>
-        <TextBox x:Name="TextBox_Team3" HorizontalAlignment="Left" Height="183" Margin="20,362,0,0" TextWrapping="Wrap" Text="GROUP B &#xA;&#xA;L1 &#xD;&#xA;L2 &#xD;&#xA;L3&#xD;&#xA;L4&#xD;&#xA;L5&#xD;&#xA;L6&#xD;&#xA;L7&#xD;&#xA;L8&#xD;&#xA;L9&#xD;&#xA;L10 &#xD;&#xA;" VerticalAlignment="Top" Width="173" IsReadOnly = "True" Grid.Row="1" TextAlignment="Center" TextChanged="TextBox_Team3_TextChanged" Background="LightGray"/>
-        <TextBox x:Name="PlacingInRound17" HorizontalAlignment="Left" Height="20" Margin="204,295,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="Nickname1" HorizontalAlignment="Left" Height="84" Margin="198,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" Background="#FF828DAF"  Text="KOKOS&#xA;TEST&#xA;DifferentIGNThanDiscord&#xA;SZKOŁA&#xA;JANUSZ&#xA;TRACZ&#xA;MAŁY&#xA;KOKS&#xA;Maluch&#xA;Duzy&#xA;Klocuch&#xA;Siara&#xA;Witkacy&#xA;Pomidor&#xA;Komputer&#xA;Mikrofon&#xA;KOKOS&#xA;TEST&#xA;DifferentIGNThanDiscord&#xA;SZKOŁA&#xA;JANUSZ&#xA;TRACZ&#xA;MAŁY&#xA;KOKS&#xA;Maluch&#xA;Duzy&#xA;Klocuch&#xA;Siara&#xA;Witkacy&#xA;Pomidor&#xA;Komputer&#xA;Mikrofon"  AcceptsReturn="True" Grid.Row="1" />
+        <TextBox x:Name="TextBox_Team4" HorizontalAlignment="Left" Height="184" Margin="198,185.667,0,0" TextWrapping="Wrap" Text="GROUP B &#xA;&#xA;L1 &#xA;L2 &#xA;L3&#xA;L4&#xA;L5&#xA;L6&#xA;L7&#xA;L8&#xA;L9&#xA;L10 &#xA;" VerticalAlignment="Top" Width="179" IsReadOnly = "True" Grid.Row="2" TextAlignment="Center" TextChanged="TextBox_Team2_TextChanged" Background="LightGray"/>
+        <TextBox x:Name="TextBox_Team3" HorizontalAlignment="Left" Height="183" Margin="20,185.667,0,0" TextWrapping="Wrap" Text="GROUP B &#xA;&#xA;L1 &#xA;L2 &#xA;L3&#xA;L4&#xA;L5&#xA;L6&#xA;L7&#xA;L8&#xA;L9&#xA;L10 &#xA;" VerticalAlignment="Top" Width="173" IsReadOnly = "True" Grid.Row="2" TextAlignment="Center" TextChanged="TextBox_Team3_TextChanged" Background="LightGray"/>
+        <TextBox x:Name="PlacingInRound17" HorizontalAlignment="Left" Height="20" Margin="204,118.667,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -84,22 +131,22 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="PlacingInRound18" HorizontalAlignment="Left" Height="20" Margin="205,319,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound19" HorizontalAlignment="Left" Height="21" Margin="205,344,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound20" HorizontalAlignment="Left" Height="21" Margin="205,369,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound21" HorizontalAlignment="Left" Height="20" Margin="205,395,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound22" HorizontalAlignment="Left" Height="21" Margin="205,420,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound23" HorizontalAlignment="Left" Height="20" Margin="205,446,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound24" HorizontalAlignment="Left" Height="20" Margin="205,471,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" RenderTransformOrigin="0.458,0"/>
-        <TextBox x:Name="PlacingInRound25" HorizontalAlignment="Left" Height="21" Margin="443,290,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="1"/>
-        <TextBox x:Name="PlacingInRound26" HorizontalAlignment="Left" Height="21" Margin="443,316,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="1"/>
-        <TextBox x:Name="PlacingInRound27" HorizontalAlignment="Left" Height="21" Margin="443,342,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound28" HorizontalAlignment="Left" Height="21" Margin="443,367,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound29" HorizontalAlignment="Left" Height="21" Margin="443,393,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound30" HorizontalAlignment="Left" Height="21" Margin="443,419,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound31" HorizontalAlignment="Left" Height="21" Margin="443,445,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <TextBox x:Name="PlacingInRound32" HorizontalAlignment="Left" Height="21" Margin="443,470,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="36" Grid.Row="1" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
-        <ListView Margin="11,266,284,38" x:Name="OutputNames_Lobby3" Background="Black" Grid.Row="1" BorderBrush="Black" Foreground="LightGray" Grid.Column="1" MinHeight="250" MinWidth="200" Height="250" MaxWidth="200" MaxHeight="250">
+        <TextBox x:Name="PlacingInRound18" HorizontalAlignment="Left" Height="20" Margin="205,142.667,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound19" HorizontalAlignment="Left" Height="21" Margin="205,167.667,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound20" HorizontalAlignment="Left" Height="21" Margin="205,192.667,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound21" HorizontalAlignment="Left" Height="20" Margin="205,218.667,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound22" HorizontalAlignment="Left" Height="21" Margin="205,243.667,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound23" HorizontalAlignment="Left" Height="20" Margin="205,269.667,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound24" HorizontalAlignment="Left" Height="20" Margin="205,294.667,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" RenderTransformOrigin="0.458,0"/>
+        <TextBox x:Name="PlacingInRound25" HorizontalAlignment="Left" Height="21" Margin="443,113.667,0,0" TextWrapping="Wrap" Text="8" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="2"/>
+        <TextBox x:Name="PlacingInRound26" HorizontalAlignment="Left" Height="21" Margin="443,139.667,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="36" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center" Grid.Row="2"/>
+        <TextBox x:Name="PlacingInRound27" HorizontalAlignment="Left" Height="21" Margin="443,165.667,0,0" TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound28" HorizontalAlignment="Left" Height="21" Margin="443,190.667,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound29" HorizontalAlignment="Left" Height="21" Margin="443,216.667,0,0" TextWrapping="Wrap" Text="4" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound30" HorizontalAlignment="Left" Height="21" Margin="443,242.667,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound31" HorizontalAlignment="Left" Height="21" Margin="443,268.667,0,0" TextWrapping="Wrap" Text="2" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <TextBox x:Name="PlacingInRound32" HorizontalAlignment="Left" Height="21" Margin="443,293.667,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="36" Grid.Row="2" Grid.Column="1" Background="#FF828DAF" MaxLines="3" MaxLength="1" TextAlignment="Center"/>
+        <ListView Margin="11,89.667,275,38" x:Name="OutputNames_Lobby3" Background="Black" Grid.Row="2" BorderBrush="Black" Foreground="LightGray" Grid.Column="1" MinHeight="250" MinWidth="200" Height="250" MaxWidth="200" MaxHeight="250">
             <ListView.View>
                 <GridView>
 
@@ -115,7 +162,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView Margin="246,268,49,36" x:Name="OutputNames_Lobby4" Background="Black" Grid.Column="1" BorderBrush="Black" Foreground="LightGray" Grid.Row="1" MinHeight="250" MinWidth="200" Height="250" MaxWidth="200" MaxHeight="250">
+        <ListView Margin="246,91.667,40,36" x:Name="OutputNames_Lobby4" Background="Black" Grid.Column="1" BorderBrush="Black" Foreground="LightGray" Grid.Row="2" MinHeight="250" MinWidth="200" Height="250" MaxWidth="200" MaxHeight="250">
             <ListView.View>
                 <GridView>
 
@@ -133,15 +180,15 @@
         </ListView>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="203,3,0,0" TextWrapping="Wrap" Text="Place" VerticalAlignment="Top" Foreground="#FFA9C1F5" FontSize="16" Grid.Row="1" Height="21" Width="37"/>
         <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="442,5,0,0" TextWrapping="Wrap" Text="Place" VerticalAlignment="Top" Foreground="#FFA9C1F5" FontSize="16" Height="21" Width="37" Grid.Row="1"/>
-        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="442,269,0,0" TextWrapping="Wrap" Text="Place" VerticalAlignment="Top" Foreground="#FFA9C1F5" FontSize="16" Height="21" Width="37" Grid.Row="1"/>
-        <ListView Margin="245,3,49,299" x:Name="OutputNames_Lobby2" Background="Black" Grid.Column="1" BorderBrush="Black" Foreground="LightGray" Grid.Row="1" MinHeight="250" MinWidth="200" Width="200" Height="250" MaxWidth="200" MaxHeight="250">
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="442,92.667,0,0" TextWrapping="Wrap" Text="Place" VerticalAlignment="Top" Foreground="#FFA9C1F5" FontSize="16" Height="21" Width="37" Grid.Row="2"/>
+        <ListView Margin="245,4,41,300" x:Name="OutputNames_Lobby2" Background="Black" Grid.Column="1" BorderBrush="Black" Foreground="LightGray" Grid.Row="1" MinHeight="250" MinWidth="200" Width="200" Height="250" MaxWidth="200" MaxHeight="250" Grid.RowSpan="2">
             <ListView.View>
                 <GridView>
 
                     <GridViewColumn Header="InGame Nick" Width="200">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Text="{Binding IGN}" Height="20" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Background="#FF828DAF" Grid.Row="1" Foreground="Black"/>
+                                <TextBox Text="{Binding IGN}" Height="20" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Background="#FF828DAF" Grid.Row="1"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -150,48 +197,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView Margin="19,13,2,4" x:Name="LeaderboardBox" Background="Black" Grid.Row="1" Grid.Column="2" BorderBrush="Black" Foreground="LightGray" Grid.RowSpan="2">
-            <ListView.View>
-                <GridView>
-
-                    <GridViewColumn Header="#" Width="30">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Place}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Background="#FF828DAF" Grid.Row="1" Foreground="Black"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-
-                    <GridViewColumn Header="Discord Name" Width="140">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding DCN}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Background="#FF828DAF" Grid.Row="1" Foreground="Black"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-
-                    <GridViewColumn Header="InGame Nick" Width="140">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding IGN}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Background="#FF828DAF" Grid.Row="1" Foreground="Black"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-
-                    <GridViewColumn Header="Points" Width="50">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding Score}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Background="#FF828DAF" Grid.Row="1" Foreground="Black"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-
-
-                </GridView>
-            </ListView.View>
-
-        </ListView>
-        <ListView Margin="11,5,283,299" x:Name="OutputNames_Lobby1" Background="Black" Grid.Row="1" Grid.Column="1" BorderBrush="Black" Foreground="LightGray" Height="250" MaxWidth="200" MaxHeight="250" MinWidth="200" MinHeight="249">
+        <ListView Margin="11,5,275,299" x:Name="OutputNames_Lobby1" Background="Black" Grid.Row="1" Grid.Column="1" BorderBrush="Black" Foreground="LightGray" Height="250" MaxWidth="200" MaxHeight="250" MinWidth="200" MinHeight="249" Grid.RowSpan="2">
             <ListView.View>
                 <GridView>
 
@@ -214,6 +220,7 @@
         <Button x:Name="B_R5_Copy4" Content="5-8" HorizontalAlignment="Left" Margin="372,27,0,0" VerticalAlignment="Top" Width="36" Height="35" RenderTransformOrigin="1.181,0.362" Click="B_R5_Copy_Click" Grid.ColumnSpan="2"/>
         <Button x:Name="B_R5_Copy5" Content="9-12" Grid.Column="1" HorizontalAlignment="Left" Margin="19,27,0,0" VerticalAlignment="Top" Width="40" Height="35" RenderTransformOrigin="1.181,0.362" Click="B_R5_Copy5_Click"/>
         <Button x:Name="B_R5_Copy6" Content="13-16" Grid.Column="1" HorizontalAlignment="Left" Margin="65,28,0,0" VerticalAlignment="Top" Width="48" Height="35" RenderTransformOrigin="1.181,0.362" Click="B_R5_Copy2_Click"/>
+
 
     </Grid>
 

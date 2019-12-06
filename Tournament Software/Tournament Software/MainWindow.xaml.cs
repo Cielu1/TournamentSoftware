@@ -623,6 +623,11 @@ for (int i = 0; i < PlayersNumber; i++)
         {
             WriteLeaderBoard(33, 48);
         }
+
+        private void LeaderboardBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 
     public class User
