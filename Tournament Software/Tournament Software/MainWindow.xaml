@@ -63,7 +63,7 @@
         </ListView>
 
 
-        <Image Grid.RowSpan="4" Source="EphosTournamentSoftwareTemplateV1Transparency.png" Stretch="Fill" IsEnabled="False" Margin="831,-40,-1710,40" Grid.Column="2"/>
+        <  Grid.RowSpan="4" Source="EphosTournamentSoftwareTemplateV1Transparency.png" Stretch="Fill" IsEnabled="False" Margin="831,-40,-1710,40" Grid.Column="2"/>
 
 
         <Button x:Name="B_SignUp" Content="Sign Up" HorizontalAlignment="Left" Margin="96,124,0,0" VerticalAlignment="Top" Width="174" Height="40" Click="B_SignUp_Click" Grid.Row="1"/>
